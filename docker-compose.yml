@@ -1,0 +1,20 @@
+version: '3.8' 
+
+services: #aşağıda tanımladığım servisleri başlatacak
+  promethous: 
+    image: prom/prometheus:latest #prometheusun dockerhub daki image ismi
+    container_name: prometheus #rastgele bir isim vermek yerine 
+    volumes: #bind mount yapıyorum locali containe riçindeki yola bağlıyorum
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"  
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana #rastgele isim yerine 
+    ports:
+      - "3000:3000"
+    volumes: #yine bind mount 
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    environment: #ortam değişkeni tanımlıyorum kullanıcı adı zaten admin 
+      - GF_SECURITY_ADMIN_PASSWORD=admin #burada şifreyide admin yapıyorum
+      #normalde bunu admin olarak tanımlamazsam Grafana ilk açılışta benden şifre isteyebilir 
