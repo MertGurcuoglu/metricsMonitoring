@@ -17,4 +17,11 @@ services: #aşağıda tanımladığım servisleri başlatacak
       - ./grafana/provisioning:/etc/grafana/provisioning
     environment: #ortam değişkeni tanımlıyorum kullanıcı adı zaten admin 
       - GF_SECURITY_ADMIN_PASSWORD=admin #burada şifreyide admin yapıyorum
-      #normalde bunu admin olarak tanımlamazsam Grafana ilk açılışta benden şifre isteyebilir 
+      #normalde bunu admin olarak tanımlamazsam Grafana ilk açılışta benden şifre isteyebilir
+
+#node exporter servisini ekliyoruz CPU,RAM,DİSK kaynak kullanımını toplayan bir servis 
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    ports:
+      - "9100:9100"
