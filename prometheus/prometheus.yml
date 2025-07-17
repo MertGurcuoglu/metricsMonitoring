@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s
+#prometheus hangi servislerden veri toplayacak
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['prometheus:9090'] #burada prometheus kendi kendine veri toplayacak yani self-monitoring
