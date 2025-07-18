@@ -1,4 +1,4 @@
-# Prometheus + Grafana Monitoring Sistemi
+# Monitoring Sistemi
 
 Bu projede Docker Compose kullanarak Prometheus, Grafana ve Node Exporter ile sistem kaynaklarını izleyen bir monitoring sistemi kurulmuştur.
 
@@ -11,7 +11,8 @@ Terminale aşağıdaki komutu girerek projeyi başlatabilirsin:
 ```bash
 docker compose up -d
 
-rdından tarayıcıdan Grafana arayüzüne ulaş:
+Prometheus Giriş
+Ardından tarayıcıdan Grafana arayüzüne ulaş:
 
 🖥️ http://localhost:3000
 
@@ -21,9 +22,9 @@ Giriş bilgileri:
 
     Şifre: admin
 
-📈 Dashboard
+Dashboard
 
 Grafana açıldığında otomatik olarak bir dashboard yüklenir.
 Bu dashboard Prometheus üzerinden gelen verileri kullanarak sistem metriklerini (örn. CPU kullanımı) görselleştirir
 
-`![Grafana Dashboard](./grafana.png)`
+![Grafana Dashboard](./grafana.png)
