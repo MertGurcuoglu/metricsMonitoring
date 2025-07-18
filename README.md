@@ -8,21 +8,20 @@ Bu projede Docker Compose kullanarak Prometheus, Grafana ve Node Exporter ile si
 
 Terminale aşağıdaki komutu girerek projeyi başlatabilirsin:
 
-```bash
 docker compose up -d
 
-Prometheus Giriş
+## Prometheus Giriş
 Ardından tarayıcıdan Grafana arayüzüne ulaş:
 
 🖥️ http://localhost:3000
 
-Giriş bilgileri:
+## Giriş bilgileri:
 
-    Kullanıcı: admin
+Kullanıcı: admin
 
-    Şifre: admin
+Şifre: admin
 
-Dashboard
+## Dashboard
 
 Grafana açıldığında otomatik olarak bir dashboard yüklenir.
 Bu dashboard Prometheus üzerinden gelen verileri kullanarak sistem metriklerini (örn. CPU kullanımı) görselleştirir
