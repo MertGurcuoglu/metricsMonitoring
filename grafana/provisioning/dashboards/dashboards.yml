@@ -1,0 +1,13 @@
+apiVersion: 1
+
+providers:
+  - name: 'default'  #bu ismi, herhangi bir şey olabilir
+    orgId: 1          # organizasyon ID si Genellikle 1 olur 
+    folder: ''        # dashboardlar ana dizine (root) yerleşir
+    type: file        
+    disableDeletion: false  
+    editable: true          # kullanıcı bu dashboard u düzenleyebilir.
+    updateIntervalSeconds: 10  # her 10 saniyede bir dosya değişti mi diye kontrol eder
+    options:
+      path: /etc/grafana/provisioning/dashboards
+      # yukarıda docker volume ile bağladığımız klasör

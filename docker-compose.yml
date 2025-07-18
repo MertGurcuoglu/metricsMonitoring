@@ -1,7 +1,7 @@
 version: '3.8' 
 
 services: #aşağıda tanımladığım servisleri başlatacak
-  promethous: 
+  prometheus: 
     image: prom/prometheus:latest #prometheusun dockerhub daki image ismi
     container_name: prometheus #rastgele bir isim vermek yerine 
     volumes: #bind mount yapıyorum locali containe riçindeki yola bağlıyorum
