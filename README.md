@@ -1,44 +1,39 @@
-# Monitoring Sistemi
-
-Bu projede Docker Compose kullanarak Prometheus, Grafana ve Node Exporter ile sistem kaynaklarını izleyen bir monitoring sistemi kurulmuştur.
+# Monitoring System
+In this project, a monitoring system has been established using Docker Compose to monitor system resources with Prometheus, Grafana, and Node Exporter.
 
 ---
 
-## Başlatma
-
-Terminale aşağıdaki komutu girerek projeyi başlatabilirsin:
+## Getting Started
+You can start the project by entering the following command in your terminal:
 
 docker compose up -d
 
-## Grafana Giriş
-Ardından tarayıcıdan Grafana arayüzüne ulaş:
+## Grafana Login
+Next, access the Grafana interface from your browser:
 
 🖥️ http://localhost:3000
 
-## Giriş bilgileri:
+## Login Credentials:
 
-Kullanıcı: admin
-
-Şifre: admin
+User: admin
+Password: admin
 
 ## Dashboard
-
-Grafana açıldığında otomatik olarak bir dashboard yüklenir.
-Bu dashboard Prometheus üzerinden gelen verileri kullanarak sistem metriklerini (örn. CPU kullanımı) görselleştirir
+When Grafana opens, a dashboard is automatically loaded. This dashboard visualizes system metrics (e.g., CPU usage) using data sourced from Prometheus.
 
 ![Grafana Dashboard](./grafana.png)
 
 
-## Alert Sistemi
-Grafana ile alert rules sistemini kullanarak otomatik olarak yüklenen alert kuralları içerir. Bu kurallar, önceden tanımlanmış eşiklere ulaşıldığında sizi bilgilendirmek için tasarlanmış ve projeye eklenmiştir.Alert rules bölümünden bakılabilir
+## Alerting System
+The project includes automatically loaded alert rules using Grafana's alerting system. These rules, which can be viewed in the "Alert rules" section, are designed to notify you when predefined thresholds are reached.
 
 ![Grafana Alert](./grafanaalert.png)
 
 
-Active notifications bölümünden de bakılabilir
+You can also check the "Active notifications" section.
 
 ![Grafana Alert2](./grafanaalert2.png)
 
-### Alert Kuralları
-Alert kuralları, `grafana/provisioning/alerting/grafana_provisioned_alerts.yaml` dosyası içinde tanımlanmıştır.
+### Alert Rules
+The alert rules are defined within the grafana/provisioning/alerting/grafana_provisioned_alerts.yaml file.
 
